@@ -5,18 +5,17 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import IosShareIcon from '@mui/icons-material/IosShare';
 
 // --- Importaciones de Logos ---
-// (Asumiendo que navbar.tsx está en 'src/commons/' y los assets en 'src/assets/')
-import logoWhite from '../assets/logoWhite.svg'; // Corregido: Importado
-import logoDarck from '../assets/logoDarck.svg'; // Corregido: Importado
+import logoWhite from '../assets/logoWhite.svg';
+import logoDarck from '../assets/logoDarck.svg';
 // -----------------------------
 
 interface NavbarProps {
   mode: 'light' | 'dark';
-  onToggleMode: () => void;
+  onToggleMode: () => void; 
 }
 
-const iconButtonStyle = {
-  color: 'var(--color-text)',
+// Estilos base de los iconos (sin definir color fijo)
+const iconBaseStyle = {
   transition: 'transform 0.2s ease-in-out, color 0.3s ease',
 
   '&:hover': {
@@ -30,10 +29,27 @@ const iconButtonStyle = {
 };
 
 const Navbar: React.FC<NavbarProps> = ({ mode, onToggleMode }) => {
+  
+  // Define el color de los iconos: Negro en modo claro, Blanco en modo oscuro.
+  const iconColor = mode === 'dark' ? 'white' : 'black';
+  
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: document.title,
+        text: 'Check out this page!',
+        url: window.location.href,
+      })
+        .then(() => console.log('Page shared successfully!'))
+        .catch((error) => console.error('Error sharing the page:', error));
+    } else {
+      alert('Sharing is not supported in this browser.');
+    }
+  };
+
   return (
     <Box
       sx={{
-        position: 'fixed',
         top: 0,
         left: 0,
         right: 0,
@@ -41,20 +57,22 @@ const Navbar: React.FC<NavbarProps> = ({ mode, onToggleMode }) => {
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '1rem',
-        backgroundColor: 'var(--color-navbar-bg)',
         zIndex: 1000,
-        transition: 'background-color 0.3s ease',
+        // backgroundColor: navbarBgColor,
+        // borderBottom: `4px solid ${navbarBorderColor}`, 
+        transition: 'background-color 0.5s',
       }}
     >
       {/* --- LADO IZQUIERDO: LOGO --- */}
       <Box
         component="img"
-        // --- CAMBIO ---
-        // Usamos las variables importadas, no un string de ruta
         src={mode === 'dark' ? logoWhite : logoDarck}
         alt="Logo"
+        onClick={() => window.location.reload()} // Recarga la página al hacer clic
         sx={{
-          height: '40px', // Ajusta la altura de tu logo
+          padding: '5px 1px 1px 8px',
+          height: '40px',
+          cursor: 'pointer', // Cambia el cursor para indicar que es clickeable
           transition: 'opacity 0.3s ease',
         }}
       />
@@ -65,15 +83,22 @@ const Navbar: React.FC<NavbarProps> = ({ mode, onToggleMode }) => {
           onClick={onToggleMode}
           aria-label={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           title={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-          sx={iconButtonStyle}
+          sx={{
+            ...iconBaseStyle,
+            color: iconColor, 
+          }}
         >
           {mode === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
         </IconButton>
 
         <IconButton
+          onClick={handleShare}
           aria-label="Share"
           title="Share"
-          sx={iconButtonStyle}
+          sx={{
+            ...iconBaseStyle,
+            color: iconColor, 
+          }}
         >
           <IosShareIcon />
         </IconButton>

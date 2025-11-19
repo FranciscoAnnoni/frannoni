@@ -13,8 +13,9 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ mode }) => {
   return (
     <Box
+      // CAMBIO CLAVE: Eliminar position: 'fixed' para que se contenga en el Box de App.tsx
       sx={{
-        position: 'fixed',
+        // position: 'fixed', <--- ELIMINADO
         bottom: 0,
         left: 0,
         right: 0,
@@ -22,8 +23,11 @@ const Footer: React.FC<FooterProps> = ({ mode }) => {
         justifyContent: 'center', // Centrado horizontal
         alignItems: 'center',    // Centrado vertical
         padding: '1rem',
-        //backgroundColor: 'var(--color-background)', // Fondo de la página
+        backgroundColor: '#1f2937', // Fondo oscuro para Footer (bg-gray-800)
         zIndex: 1000,
+        // Agregando estilos de Tailwind para esquinas redondeadas en la parte inferior
+        borderBottomLeftRadius: '1rem',
+        borderBottomRightRadius: '1rem',
       }}
     >
       <Box
