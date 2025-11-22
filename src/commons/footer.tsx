@@ -23,7 +23,6 @@ const Footer: React.FC<FooterProps> = ({ mode }) => {
         justifyContent: 'center', // Centrado horizontal
         alignItems: 'center',    // Centrado vertical
         padding: '1rem',
-        backgroundColor: '#1f2937', // Fondo oscuro para Footer (bg-gray-800)
         zIndex: 1000,
         // Agregando estilos de Tailwind para esquinas redondeadas en la parte inferior
         borderBottomLeftRadius: '1rem',

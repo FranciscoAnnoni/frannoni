@@ -1,0 +1,33 @@
+[
+    {
+        "id": "0",
+        "label": "Asi es el curso de Ingreso UTN",
+        "url": "https://youtu.be/499X2czV1Os",
+        "imageUrl": "https://img.youtube.com/vi/499X2czV1Os/maxresdefault.jpg",
+        "type": "image-card"
+    },
+    {
+        "id": "1",
+        "label": "Recursos Ingenieria",
+        "url": "https://drive.google.com/drive/folders/1NTEJYKKOvBkrRII4Wn7LX5aGvZOKfuAX?usp=sharing",
+        "iconName": "Work"
+    },
+    {
+        "id": "2",
+        "label": "Blog Personal",
+        "url": "/blog",
+        "iconName": "Article"
+    },
+    {
+        "id": "3",
+        "label": "Contacto",
+        "url": "mailto:contacto@frannoni.dev",
+        "iconName": "Mail"
+    },
+    {
+        "id": "4",
+        "label": "Recursos Gratuitos",
+        "url": "/resources",
+        "iconName": "Folder"
+    }
+]

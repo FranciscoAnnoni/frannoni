@@ -1,28 +1,26 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import Profile from '../assets/profile.jpg';
+import ProfileImage from '../base/ProfileImage';
+import ProfileInfo from '../base/ProfileInfo';
+import CustomDivider from '../base/CustomDivider';
+import SocialMediaList from './SocialMediaList';
+import PageLinksList from './PageLinksList';
 
-const Content = () => {
+interface ContentProps {
+  mode: 'light' | 'dark';
+}
+
+const Content: React.FC<ContentProps> = ({ mode }) => {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <Box
-        component="img"
-        src={Profile}
-        alt="Profile"
-        sx={{
-          width: '150px',
-          height: '150px',
-          borderRadius: '10px',
-          objectFit: 'cover',
-          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.48)', // Add shadow effect
-        }}
-      />
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <ProfileImage mode={mode} />
+      <ProfileInfo />
+
+      <SocialMediaList mode={mode} />
+
+      <CustomDivider mode={mode} />
+
+      <PageLinksList />
     </Box>
   );
 };

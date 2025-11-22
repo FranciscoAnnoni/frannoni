@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "name": "Instagram",
+        "url": "https://instagram.com",
+        "iconName": "Instagram",
+        "hoverColor": "#E1306C"
+    },
+    {
+        "id": "3",
+        "name": "TikTok",
+        "url": "https://tiktok.com",
+        "iconName": "TikTok",
+        "hoverColor": "#00f2ea"
+    },
+    {
+        "id": "4",
+        "name": "YouTube",
+        "url": "https://youtube.com",
+        "iconName": "YouTube",
+        "hoverColor": "#FF0000"
+    }
+]

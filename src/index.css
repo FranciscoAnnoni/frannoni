@@ -11,7 +11,8 @@
   /* --- Variables de Color (Dark) --- */
   --color-text: rgba(255, 255, 255, 0.87);
   --color-background: #242424;
-  --color-navbar-bg: #242424; /* Color de navbar, igual al fondo */
+  --color-navbar-bg: #242424;
+  /* Color de navbar, igual al fondo */
   --color-button-bg: #1a1a1a;
   --color-link: #646cff;
   --color-link-hover: #535bf2;
@@ -21,12 +22,17 @@
 /* 2. Modo Claro (Invertido) - Se activa con JavaScript */
 [data-theme='light'] {
   /* --- Variables de Color (Light) --- */
-  --color-text: #242424; /* Invertido */
-  --color-background: rgba(255, 255, 255, 0.87); /* Invertido */
-  --color-navbar-bg: rgba(255, 255, 255, 0.87); /* Color de navbar, igual al fondo */
+  --color-text: #242424;
+  /* Invertido */
+  --color-background: rgba(255, 255, 255, 0.87);
+  /* Invertido */
+  --color-navbar-bg: rgba(255, 255, 255, 0.87);
+  /* Color de navbar, igual al fondo */
   --color-button-bg: #f9f9f9;
-  --color-link: #535bf2; /* Invertido */
-  --color-link-hover: #646cff; /* Invertido */
+  --color-link: #535bf2;
+  /* Invertido */
+  --color-link-hover: #646cff;
+  /* Invertido */
   --color-button-hover-border: #535bf2;
 }
 
@@ -53,6 +59,7 @@ a {
   color: var(--color-link);
   text-decoration: inherit;
 }
+
 a:hover {
   color: var(--color-link-hover);
 }
@@ -66,13 +73,15 @@ button {
   font-family: inherit;
   background-color: var(--color-button-bg);
   /* Aplicamos color de texto para que también cambie */
-  color: var(--color-text); 
+  color: var(--color-text);
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: var(--color-button-hover-border);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

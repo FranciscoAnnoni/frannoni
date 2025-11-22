@@ -11,39 +11,53 @@ import logoDarck from '../assets/logoDarck.svg';
 
 interface NavbarProps {
   mode: 'light' | 'dark';
-  onToggleMode: () => void; 
+  onToggleMode: () => void;
 }
 
 // Estilos base de los iconos (sin definir color fijo)
 const iconBaseStyle = {
   transition: 'transform 0.2s ease-in-out, color 0.3s ease',
-
   '&:hover': {
     transform: 'translateY(-2px)',
     backgroundColor: 'transparent',
   },
-
   '&:focus': {
     outline: 'none',
   },
 };
 
 const Navbar: React.FC<NavbarProps> = ({ mode, onToggleMode }) => {
-  
-  // Define el color de los iconos: Negro en modo claro, Blanco en modo oscuro.
   const iconColor = mode === 'dark' ? 'white' : 'black';
-  
-  const handleShare = () => {
+
+  const handleShare = async () => {
+    // Try native Web Share API first
     if (navigator.share) {
-      navigator.share({
-        title: document.title,
-        text: 'Check out this page!',
-        url: window.location.href,
-      })
-        .then(() => console.log('Page shared successfully!'))
-        .catch((error) => console.error('Error sharing the page:', error));
+      try {
+        await navigator.share({
+          title: document.title,
+          text: 'Check out this page!',
+          url: window.location.href,
+        });
+        console.log('Page shared successfully!');
+        return;
+      } catch (error) {
+        console.error('Error sharing the page:', error);
+        // fall back to clipboard
+      }
+    }
+    // Fallback: copy URL to clipboard
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        alert('URL copied to clipboard. You can now share it manually.');
+      } catch (err) {
+        console.error('Clipboard write failed:', err);
+        alert('Sharing is not supported in this browser, and copying to clipboard failed.');
+      }
     } else {
-      alert('Sharing is not supported in this browser.');
+      // Final fallback: prompt the user to copy manually
+      const manualUrl = window.location.href;
+      prompt('Copy this URL to share:', manualUrl);
     }
   };
 
@@ -59,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ mode, onToggleMode }) => {
         padding: '1rem',
         zIndex: 1000,
         // backgroundColor: navbarBgColor,
-        // borderBottom: `4px solid ${navbarBorderColor}`, 
+        // borderBottom: `4px solid ${navbarBorderColor}`,
         transition: 'background-color 0.5s',
       }}
     >
@@ -68,16 +82,16 @@ const Navbar: React.FC<NavbarProps> = ({ mode, onToggleMode }) => {
         component="img"
         src={mode === 'dark' ? logoWhite : logoDarck}
         alt="Logo"
-        onClick={() => window.location.reload()} // Recarga la página al hacer clic
+        onClick={() => window.location.reload()}
         sx={{
           padding: '5px 1px 1px 8px',
-          height: '40px',
-          cursor: 'pointer', // Cambia el cursor para indicar que es clickeable
+          height: '30px',
+          cursor: 'pointer',
           transition: 'opacity 0.3s ease',
+          userSelect: 'none',
         }}
       />
 
-      {/* --- LADO DERECHO: ICONOS --- */}
       <Box>
         <IconButton
           onClick={onToggleMode}
@@ -85,7 +99,7 @@ const Navbar: React.FC<NavbarProps> = ({ mode, onToggleMode }) => {
           title={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           sx={{
             ...iconBaseStyle,
-            color: iconColor, 
+            color: iconColor,
           }}
         >
           {mode === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
@@ -97,7 +111,7 @@ const Navbar: React.FC<NavbarProps> = ({ mode, onToggleMode }) => {
           title="Share"
           sx={{
             ...iconBaseStyle,
-            color: iconColor, 
+            color: iconColor,
           }}
         >
           <IosShareIcon />
