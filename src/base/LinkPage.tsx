@@ -21,7 +21,7 @@ const LinkPage: React.FC<LinkPageProps> = ({ label, url, iconName }) => {
             sx={{
                 justifyContent: 'flex-start',
                 textTransform: 'none',
-                padding: '12px 24px',
+                padding: { xs: '12px 16px', sm: '12px 24px' },
                 borderRadius: '12px',
                 borderColor: 'divider',
                 color: 'inherit', // Inherit text color
@@ -29,8 +29,8 @@ const LinkPage: React.FC<LinkPageProps> = ({ label, url, iconName }) => {
                 boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
                 transition: 'all 0.3s ease',
                 '&:hover': {
-                    borderColor: 'primary.main',
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    borderColor: 'rgba(255, 255, 255, 0.5)', // Neutral grey border
+                    backgroundColor: 'rgba(255, 255, 255, 0.15)', // Slightly lighter neutral background
                     transform: 'translateY(-2px)',
                     boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
                 },
@@ -39,7 +39,7 @@ const LinkPage: React.FC<LinkPageProps> = ({ label, url, iconName }) => {
             startIcon={IconComponent ? <IconComponent /> : null}
         >
             <Box sx={{ flexGrow: 1, textAlign: 'center' }}>
-                <Typography variant="button" sx={{ fontWeight: 600, fontSize: '1rem' }}>
+                <Typography variant="button" sx={{ fontWeight: 600, fontSize: { xs: '0.8rem', sm: '1rem' }, lineHeight: 1.2 }}>
                     {label}
                 </Typography>
             </Box>

@@ -42,7 +42,7 @@ const LinkSocialMedia: React.FC<LinkSocialMediaProps> = ({ iconName, url, name, 
                             height: 'auto',
                             zIndex: 1000,
                             pointerEvents: 'none',
-                            opacity: 0.6,
+                            opacity: 0.75,
                         }}
                     />
                 )}

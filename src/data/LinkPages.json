@@ -8,26 +8,20 @@
     },
     {
         "id": "1",
-        "label": "Recursos Ingenieria",
-        "url": "https://drive.google.com/drive/folders/1NTEJYKKOvBkrRII4Wn7LX5aGvZOKfuAX?usp=sharing",
-        "iconName": "Work"
-    },
-    {
-        "id": "2",
-        "label": "Blog Personal",
-        "url": "/blog",
+        "label": "Recursos Analisis Matematico 1",
+        "url": "https://drive.google.com/drive/folders/1t6Qgh16UJDVeySpQN1CvR_ps7HBSfpFz?usp=sharing",
         "iconName": "Article"
     },
     {
-        "id": "3",
-        "label": "Contacto",
-        "url": "mailto:contacto@frannoni.dev",
-        "iconName": "Mail"
+        "id": "2",
+        "label": "Recursos Algebra Lineal",
+        "url": "https://drive.google.com/drive/folders/1kdkYZGbp4U8N3aLmxMcW_rxSn9TDPKT7?usp=sharing",
+        "iconName": "Article"
     },
     {
         "id": "4",
-        "label": "Recursos Gratuitos",
-        "url": "/resources",
-        "iconName": "Folder"
+        "label": "Guia para aprobar Finales",
+        "url": "https://energetic-carnation-a42.notion.site/GU-A-PREVIA-AL-FINAL-UNIVERSITARIO-233d20ee3b7a80ecbe60eacc6559bf97",
+        "iconName": "Mail"
     }
 ]

@@ -14,9 +14,9 @@
   --color-navbar-bg: #242424;
   /* Color de navbar, igual al fondo */
   --color-button-bg: #1a1a1a;
-  --color-link: #646cff;
-  --color-link-hover: #535bf2;
-  --color-button-hover-border: #646cff;
+  --color-link: #e0e0e0;
+  --color-link-hover: #ffffff;
+  --color-button-hover-border: #ffffff;
 }
 
 /* 2. Modo Claro (Invertido) - Se activa con JavaScript */
@@ -29,11 +29,11 @@
   --color-navbar-bg: rgba(255, 255, 255, 0.87);
   /* Color de navbar, igual al fondo */
   --color-button-bg: #f9f9f9;
-  --color-link: #535bf2;
+  --color-link: #333333;
   /* Invertido */
-  --color-link-hover: #646cff;
+  --color-link-hover: #000000;
   /* Invertido */
-  --color-button-hover-border: #535bf2;
+  --color-button-hover-border: #000000;
 }
 
 /* 3. Aplicar las variables */

@@ -2,21 +2,21 @@
     {
         "id": "1",
         "name": "Instagram",
-        "url": "https://instagram.com",
+        "url": "https://www.instagram.com/frannoni_/",
         "iconName": "Instagram",
         "hoverColor": "#E1306C"
     },
     {
         "id": "3",
         "name": "TikTok",
-        "url": "https://tiktok.com",
+        "url": "https://tiktok.com/@frannoni",
         "iconName": "TikTok",
         "hoverColor": "#00f2ea"
     },
     {
         "id": "4",
         "name": "YouTube",
-        "url": "https://youtube.com",
+        "url": "https://www.youtube.com/@frannoni",
         "iconName": "YouTube",
         "hoverColor": "#FF0000"
     }
