@@ -15,7 +15,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ mode }) => {
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: 2 }}>
             <Avatar
-                alt="Profile Picture"
+                alt="Francisco Annoni"
                 src={Profile}
                 variant="square"
                 sx={{
