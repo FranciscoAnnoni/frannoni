@@ -31,18 +31,22 @@ function App() {
 
       <Navbar mode={mode} onToggleMode={toggleMode} />
 
-      <Box sx={{
-        textAlign: 'center',
-        padding: '15px',
-        flexGrow: 1,
-        color: mode === 'dark' ? 'white' : 'black',
-        transition: 'color 0.5s, background-color 0.5s',
-      }}>
-        <Content mode={mode} />
+      <main style={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+        <Box sx={{
+          textAlign: 'center',
+          padding: '15px',
+          flexGrow: 1,
+          color: mode === 'dark' ? 'white' : 'black',
+          transition: 'color 0.5s, background-color 0.5s',
+        }}>
+          <Content mode={mode} />
 
-      </Box>
+        </Box>
+      </main>
 
-      <Footer mode={mode} />
+      <footer>
+        <Footer mode={mode} />
+      </footer>
     </Box>
   );
 }

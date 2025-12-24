@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, CardActionArea, CardMedia, CardContent, Typography } from '@mui/material';
-import * as MuiIcons from '@mui/icons-material';
 
 interface LinkImageCardProps {
     label: string;

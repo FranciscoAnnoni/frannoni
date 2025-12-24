@@ -53,6 +53,7 @@ const LinkSocialMedia: React.FC<LinkSocialMediaProps> = ({ iconName, url, name, 
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={name}
                     sx={{
                         position: 'relative',
                         zIndex: 1,
