@@ -7,6 +7,12 @@
         "type": "image-card"
     },
     {
+        "id": "5",
+        "label": "EL MEJOR LIBRO DE FISICA 1",
+        "url": "https://www.utnianos.com.ar/foro/attachment.php?aid=23440",
+        "iconName": "Book"
+    },
+    {
         "id": "1",
         "label": "Recursos Analisis Matematico 1",
         "url": "https://drive.google.com/drive/folders/1t6Qgh16UJDVeySpQN1CvR_ps7HBSfpFz?usp=sharing",
