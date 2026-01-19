@@ -7,6 +7,12 @@
         "type": "image-card"
     },
     {
+        "id": "3",
+        "label": "LIBROS PARA ALGEBRA LINEAL",
+        "url": "https://drive.google.com/drive/folders/1aJA8Qq4JPnuyZMwkhiks-PM24nIRjP0q?usp=sharing",
+        "iconName": "Book"
+    },
+    {
         "id": "5",
         "label": "EL MEJOR LIBRO DE FISICA 1",
         "url": "https://www.utnianos.com.ar/foro/attachment.php?aid=23440",
