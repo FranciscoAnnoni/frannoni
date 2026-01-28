@@ -7,31 +7,37 @@
         "type": "image-card"
     },
     {
-        "id": "3",
+        "id": "1",
+        "label": "PROPTS PARA LOS AGENTES DE IA",
+        "url": "https://github.com/asgeirtj/system_prompts_leaks",
+        "iconName": "Link"
+    },
+    {
+        "id": "2",
         "label": "LIBROS PARA ALGEBRA LINEAL",
         "url": "https://drive.google.com/drive/folders/1aJA8Qq4JPnuyZMwkhiks-PM24nIRjP0q?usp=sharing",
         "iconName": "Book"
     },
     {
-        "id": "5",
+        "id": "3",
         "label": "EL MEJOR LIBRO DE FISICA 1",
         "url": "https://www.utnianos.com.ar/foro/attachment.php?aid=23440",
         "iconName": "Book"
     },
     {
-        "id": "1",
+        "id": "4",
         "label": "Recursos Analisis Matematico 1",
         "url": "https://drive.google.com/drive/folders/1t6Qgh16UJDVeySpQN1CvR_ps7HBSfpFz?usp=sharing",
         "iconName": "Article"
     },
     {
-        "id": "2",
+        "id": "5",
         "label": "Recursos Algebra Lineal",
         "url": "https://drive.google.com/drive/folders/1kdkYZGbp4U8N3aLmxMcW_rxSn9TDPKT7?usp=sharing",
         "iconName": "Article"
     },
     {
-        "id": "4",
+        "id": "6",
         "label": "Guia para aprobar Finales",
         "url": "https://energetic-carnation-a42.notion.site/GU-A-PREVIA-AL-FINAL-UNIVERSITARIO-233d20ee3b7a80ecbe60eacc6559bf97",
         "iconName": "Mail"
