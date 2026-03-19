@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import '../index.css';
 // Asumiendo que los archivos están en 'src/commons/' y App.tsx en 'src/'
-import Navbar from '../commons/Navbar.tsx';
-import Footer from '../commons/Footer.tsx';
+import Navbar from '../commons/navbar.tsx';
+import Footer from '../commons/footer.tsx';
 import { Box } from '@mui/material';
 import Content from '../commons/Content.tsx';
 
